@@ -18,6 +18,7 @@ class PasswordComplyTest {
     @Test
     void testDoesPasswordExist() {
         PasswordComply password = new PasswordComply("abcd1234");
+
         assertThrows(java.sql.SQLException.class,() -> password.doesNotAlreadyExist(), "SQL Exception was thrown.");
     }
 
